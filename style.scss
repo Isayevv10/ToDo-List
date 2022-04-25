@@ -1,0 +1,113 @@
+
+$bgColor: (
+    'bg1': #ecf0f3,
+    'bg2': #4c5773,
+    'bg3': #e2e6e9
+);
+
+@mixin text($fw) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: $fw;
+};
+
+body {
+    background: map-get($bgColor, 'bg1');
+}
+.container {
+    text-align: center;
+    background: map-get($bgColor, 'bg1' );
+}
+
+.headLine {
+
+    background: map-get($bgColor,'bg1' );
+    color: #ecf0f3;
+    i {
+        display: inline-block;
+        margin-right: 15px;
+        background: #4c5773;
+    }
+
+    h2 {
+        color: #4c5773;
+        display: inline-block;
+    }
+};
+
+.mainPart {
+    
+    .submitBtn {
+
+        outline: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 1rem;
+        width: 30px;
+        height: 30px;
+        background: map-get($bgColor, 'bg1');
+
+        i {
+        cursor: pointer;
+
+        }
+    }
+    
+    input{
+        padding-left: 10px;
+        width: 210px;
+        height: 30px;
+        outline: none;
+        border: none;
+        background: map-get($bgColor, 'bg1' );
+        font-size: 15px;
+        border-radius: 1rem;
+        box-shadow: 1rem 1rem 1rem #d3dae7, -0.5rem -0.5rem 1rem #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.listItem {
+
+    .ulList{   
+        margin: 0;
+        padding: 0;
+
+        li {
+            width: 232px;
+            height: 24px;
+            margin: 10px auto;
+            padding-top: 6px;
+            padding-left: 15px;
+            list-style-type: none;
+            text-align: left;
+            @include text( 500 );
+            position: relative;
+            background: map-get($bgColor, 'bg3');
+            border-radius: 1rem;
+            a {
+                cursor: pointer;
+                position: absolute;
+                right: 2.5%;
+            }
+        }  
+    }
+}
+
+.clearAllToDos {
+    margin: 15px auto;
+
+    button {
+        width: 228px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        background: map-get($bgColor, 'bg1' );
+        @include text( 400 );
+        box-shadow: 0.5rem 0.5rem 0.5rem #d3dae7, -0.5rem -0.5rem 1rem #d3dae7;
+    }
+}
+
+ 
